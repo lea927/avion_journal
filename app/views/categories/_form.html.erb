@@ -1,0 +1,5 @@
+<%= form_with model: @category do |f| %>  
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name, placeholder: "Please put category name" %>
+  <%= f.submit %>
+<% end %>
