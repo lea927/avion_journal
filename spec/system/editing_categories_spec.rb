@@ -8,7 +8,7 @@ RSpec.describe "EditingCategories", type: :system do
   it "edits category and displays index page" do
 
     # Visiting edit category page
-    visit edit_category_path
+    visit '/categories/:id/edit'
 
     # Expecting category to appear on the screen
     category = Category.order("id").last
