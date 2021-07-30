@@ -20,7 +20,8 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    
+    @category = Category.find(params[:id])
+    @category.update!(category_params)
   end
 
   private
