@@ -19,6 +19,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
 
+  def update
+    
+  end
+
   private
 
   def category_params
