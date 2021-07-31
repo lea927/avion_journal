@@ -12,24 +12,24 @@ RSpec.describe "CreatingCategories", driver: :selenium_chrome, js: true do
   it "saves and displays the resulting category" do
     # Visiting new category page
     visit '/categories/new'
-    sleep(3)
+    sleep(1)
 
     # Entering name into form field
     fill_in 'Name', with: 'School'
-    sleep(3)
+    sleep(1)
 
     # Clicking on add category button 
     click_on 'Create Category'
-    sleep(3)
+    sleep(1)
 
     # Expecting category to appear on the screen
     expect(page).to have_content('School')
-    sleep(3)
+    sleep(1)
 
     # Confirming category was saved in the database
     category = Category.order("id").last
     expect(category.name).to eq('School')
-    sleep(3)
+    sleep(2)
 
   end
 end
